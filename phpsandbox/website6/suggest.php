@@ -19,16 +19,16 @@
     $suggestion = "";
 
     // Get Suggestions
-    if($q !== ""){
-        $q = strtolower($q);
-        $len = strlen($q);
-        foreach($people as $person){
-            if(stristr($q, substr($person, 0, $len))){
-                if($suggestion === ""){
-                    $suggestion = $person;
+    if($q !== ""){ // $q = "Abr" 
+        $q = strtolower($q); // $q = "abr"
+        $len = strlen($q); // $len = 3
+        foreach($people as $person){ 
+            if(stristr($q, substr($person, 0, $len))){ // if(stristr("abr", "abr"))
+                if($suggestion === ""){ // if $suggestion is empty
+                    $suggestion = $person; // the current person of people will become the first suggestion
                 }
                 else{
-                    $suggestion .= ", $person";
+                    $suggestion .= ", $person"; // as the foreach loop continues, append any other person of people to the suggestion string
                 }
             }
         }
