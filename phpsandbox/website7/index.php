@@ -65,4 +65,4 @@
     $handle = fopen('file2.txt', 'w'); // Create new file named file2.txt
     $txt = "Choi Jong-Hae\n";
     fwrite($handle, $txt);
-    fclose($handle);`
+    fclose($handle);
